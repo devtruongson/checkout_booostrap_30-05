@@ -172,7 +172,6 @@ if (formAdmin) {
 
         if (formAdmin.dataset.action === "add") {
             const elements = formAdmin.querySelectorAll("[name]");
-
             const dataBuilder = {};
             elements.forEach(ele => {
                 if (!ele.value) {
