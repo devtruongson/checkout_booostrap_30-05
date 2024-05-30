@@ -1,0 +1,320 @@
+main {
+    background-color: #f5f5f5;
+    height          : 100vh;
+    padding         : 10px 0;
+    overflow        : auto;
+
+    h1 {
+        font-size    : 22px;
+        margin-bottom: 10px;
+    }
+
+    .card-itemp-product {
+        padding-bottom  : 10px;
+        background-color: #fff;
+        display         : block;
+        color           : currentColor;
+        text-decoration : none;
+        border-radius   : 3px;
+        border          : 1px solid transparent;
+        overflow        : hidden;
+        margin-bottom   : 10px;
+
+        &:hover {
+            border   : 1px solid #ee4d2d;
+            cursor   : pointer;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+#product-list {
+
+    img {
+        height       : 286px;
+        object-fit   : cover;
+        width        : 100%;
+        border-radius: 2px;
+    }
+
+    h2 {
+        overflow-wrap     : break-word;
+        overflow          : hidden;
+        display           : -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size         : 14px;
+        padding           : 0 10px;
+        padding-top       : 6px;
+    }
+
+    .price-card {
+        display        : flex;
+        justify-content: space-between;
+        margin-top     : 16px;
+        padding        : 0 10px;
+
+        span {
+            &:first-child {
+                color    : #ee4d2d;
+                font-size: 16px;
+
+                label {
+                    font-size: 14px;
+                }
+            }
+
+            &:last-child {
+                color    : #333;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+#app {
+    background-color: #f5f5f5;
+    height          : 100vh;
+    padding         : 10px 0;
+    overflow        : auto;
+
+    #render-product-detail {
+        background-color: #fff;
+        padding         : 30px 20px;
+        border-radius   : 10px;
+
+        img {
+            width  : 90%;
+            margin : 0 auto;
+            display: block;
+        }
+
+        h2 {
+            display           : -webkit-box;
+            text-overflow     : ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            font-size         : 20px;
+            font-weight       : 500;
+            line-height       : 24px;
+            margin            : 0;
+            max-height        : 48px;
+            max-width         : 665px;
+            overflow          : hidden;
+            overflow-wrap     : break-word;
+            margin-bottom     : 10px;
+        }
+
+        #badge {
+            span {
+                &:first-child {
+                    color: #ee4d2d;
+                }
+
+                &:nth-child(2) {
+                    color       : #333;
+                    font-size   : 14px;
+                    border-left : 1px solid #ccc;
+                    padding-left: 10px;
+                }
+
+                &:last-child {
+                    color       : #333;
+                    font-size   : 14px;
+                    border-left : 1px solid #ccc;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .price_detail {
+            background-color: rgba(0, 0, 0, 0.08);
+            padding         : 6px 10px;
+            border-radius   : 6px;
+            margin          : 0;
+
+            div {
+                display    : flex;
+                gap        : 20px;
+                align-items: center;
+
+                p {
+                    color  : #ee4d2d;
+                    padding: 0;
+                    margin : 0;
+
+                    &:first-child {
+                        font-size : 18px;
+                        font-style: italic;
+                    }
+
+                    &:last-child {
+                        font-size : 20px;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        #chinh-sach {
+            margin-top: 10px;
+
+            p {
+                &:first-child {
+                    color         : #333;
+                    font-weight   : 600;
+                    padding       : 0;
+                    margin        : 0;
+                    padding-bottom: 2px;
+                    display       : flex;
+                    align-items   : center;
+
+                    span {
+                        margin-right: 10px;
+                        color       : #666;
+                        font-size   : 14px;
+                        max-width   : 72px;
+                        display     : inline-block;
+                    }
+                }
+
+                &:nth-child(2) {
+                    color      : #333;
+                    font-weight: 600;
+
+                    span {
+                        margin-right: 10px;
+                        color       : #666;
+                        font-size   : 14px;
+                    }
+                }
+            }
+        }
+
+        #size {
+            display    : flex;
+            align-items: center;
+            gap        : 20px;
+
+            div {
+                &:first-child {
+                    margin-right: 10px;
+                    color       : #666;
+                    font-weight : 600;
+                    font-size   : 14px;
+                    max-width   : 72px;
+                    display     : inline-block;
+                }
+
+                &:last-child {
+                    display    : flex;
+                    gap        : 15px;
+                    align-items: center;
+
+                    button {
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+
+
+        .quantity-input {
+            display    : flex;
+            align-items: center;
+        }
+
+        .quantity-btn {
+            background-color: #f0f0f0;
+            border          : 1px solid #ccc;
+            padding         : 10px 15px;
+            cursor          : pointer;
+            font-size       : 16px;
+        }
+
+        #quantity {
+            width       : 50px;
+            text-align  : center;
+            border      : 1px solid #ccc;
+            border-left : none;
+            border-right: none;
+            font-size   : 16px;
+            padding     : 10px 0;
+            outline     : none;
+        }
+
+        .quantity-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        #soluong {
+            display    : flex;
+            align-items: center;
+            gap        : 20px;
+
+            div {
+                &:first-child {
+                    margin-right: 10px;
+                    color       : #666;
+                    font-weight : 600;
+                    font-size   : 14px;
+                    max-width   : 72px;
+                    display     : inline-block;
+                }
+            }
+
+            span {
+                margin-right: 10px;
+                color       : #666;
+                font-weight : 600;
+                font-size   : 14px;
+            }
+        }
+    }
+
+    .btn-add-card {
+        border     : 1px solid #ee4d2d;
+        padding    : 10px 20px;
+        font-weight: 600;
+    }
+
+    .btn-buy {
+        background : #ee4d2d;
+        border     : 1px solid #ee4d2d;
+        padding    : 10px 20px;
+        color      : #fff;
+        font-weight: 600;
+    }
+}
+
+#admin {
+    h1 {
+        font-size    : 22px;
+        margin-bottom: 10px;
+    }
+}
+
+.list-image-render {
+    display        : flex;
+    margin-top     : 10px;
+    justify-content: center;
+
+    img {
+        border-radius: 10px !important;
+        width        : 50px !important;
+        height       : 50px !important;
+        object-fit   : cover !important;
+        flex-shrink  : 0;
+        margin       : 0 10px !important;
+        cursor       : pointer;
+        border       : 1.5px solid #eee;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.active {
+            border-color: #ee4d2d;
+        }
+    }
+}
